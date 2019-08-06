@@ -2,7 +2,10 @@
 Setup Kubernetes Cluster with Kubeadm and Vagrant
 
 Introduction
+
 使用 kubeadm + vagrant 自动化部署 k8s 集群，基于 Centos7 操作系统。该工程 fork 自 [kubeadm-vagrant](https://github.com/coolsvap/kubeadm-vagrant),  对已知问题进行了修复：节点设置正确的 IP 地址[「set-k8s-node-ip.sh」](./set-k8s-node-ip.sh)。否则使用过程中会出现问题，具体问题见这里：[「kubeadm + vagrant 部署多节点 k8s 的一个坑」](https://qhh.me/2019/08/06/kubeadm-vagrant-%E9%83%A8%E7%BD%B2%E5%A4%9A%E8%8A%82%E7%82%B9-k8s-%E7%9A%84%E4%B8%80%E4%B8%AA%E5%9D%91/)。其他一些调整：节点初始化脚本更改、Vagrantfile 添加 Shell 脚本配置器，运行初始化脚本。
+
+默认：1 个 master 节点，1 个 node 节点，可以根据需要修改 Vagrantfile 文件。
 
 With reference to steps listed at [Using kubeadm to Create a Cluster](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) for setting up the Kubernetes cluster with kubeadm. I have been working on an automation to setup the cluster. The result of it is [kubeadm-vagrant](https://github.com/coolsvap/kubeadm-vagrant), a github project with simple steps to setup your kubernetes cluster with more control on vagrant based virtual machines.
 
