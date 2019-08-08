@@ -31,7 +31,8 @@ mkdir -p $HOME/.kube
 sudo cp -Rf /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+# 改了下 flannel 启动参数，适配 vagrant 多网卡情况，否则部署后 DNS 无法解析
+kubectl apply -f /vagrant/kube-flannel.yml
 
 
 SCRIPT
