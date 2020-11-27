@@ -1,4 +1,4 @@
-BOX_IMAGE = "Centos7"
+BOX_IMAGE = "centos/7"
 SETUP_MASTER = true
 SETUP_NODES = true
 NODE_COUNT = 1
